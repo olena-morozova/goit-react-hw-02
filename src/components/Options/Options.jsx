@@ -1,6 +1,7 @@
+import css from "./Options.module.css";
 export default function Options({ options, onUpdate, totalFeedback, onReset }) {
   return (
-    <div>
+    <div className={css.btncontainer}>
       {options.map((option) => (
         <button key={option} onClick={() => onUpdate(option)}>
           {option.charAt(0).toUpperCase() + option.slice(1)}
